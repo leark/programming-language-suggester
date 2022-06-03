@@ -1,3 +1,12 @@
+body {
+  font-size: calc(10px + 1vw);
+  line-height: calc(1.1em + 0.5vw);
+}
+
+#name {
+  box-sizing:unset;
+}
+
 #questions-form {
   display: none;
 }
@@ -7,10 +16,15 @@
 }
 
 .radio-questions {
-  margin-bottom: 0;
-  font-size: large;
+  margin-bottom: calc(4px + 1vw);
+  font-size: calc(14px + 1vw);
   border-bottom: 1px black solid;
   border-top: 1px black solid;
+  padding: calc(4px + 1vw);
+}
+
+.custom-radio {
+  align-items: 1px;
 }
 
 #submitDiv {
