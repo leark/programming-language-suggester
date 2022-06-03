@@ -1,37 +1,39 @@
-# _{Application Name}_
+# Programming Language Suggester
 
-#### By _**{List of contributors}**_
+#### By Seung Lee
 
-#### _{Brief description of application}_
+#### A simple webpage that suggests what programming language one should learn based on responses to few questions.
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* HTML
+* CSS
+* Bootsrap
+* Javascript
+* jQuery
+
+## [GitHub Pages Link](https://leark.github.io/programming-language-suggester)
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+Programming Language Suggester webpage asks the viewer a series of questions about themselves and provides a suggestion on what programming language they should learn based on the answers they provide. The questions and the suggestions are not serious in any way and are to be enjoyed for fun.
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+1. Open Git Bash if on Windows and terminal if on Mac
+2. Run the command 
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+    ``Git clone https://github.com/leark/programming-language-suggester``
+
+3. Go inside programming-language-suggester directory
+4. Open index.html
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+No known bugs
 
 ## License
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+[GNU](/LICENSE-GNU)
 
-Copyright (c) _date_ _author name(s)_
+Copyright (c) 2022 Seung Lee
