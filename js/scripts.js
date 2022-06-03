@@ -2,9 +2,21 @@ $(document).ready(function () {
   // when Start is clicked
   $('#start').click(function () {
     $('#questions-form').fadeIn();
+    $('#nameDiv').show();
     $('#startDiv').hide();
+    $('.lead').hide();
   });
 
+  $('.next').click(function (event) {
+    event.preventDefault();
+    // check if name is empty and ask to put in name
+    if ($(this).parent().parent().is('#nameDiv') && $('#name').val() === '') {
+      $('.invalid-feedback').show();
+    } else {
+      $(this).parent().parent().hide();
+      $(this).parent().parent().next().fadeIn();
+    }
+  });
   // When Show me the way! is clicked
   $('form#questions-form').submit(function (event) {
     event.preventDefault();
@@ -22,7 +34,7 @@ $(document).ready(function () {
     const q8 = $('input:radio[name=q8]:checked').val();
 
     let resultTitle =
-      'CONGRATULATIONS, ' + name + ", LANGUAGE YOU'RE MOST ATTUNED TO IS ";
+      'Congratulations, ' + name + ', the language you are most attuned to is ';
     let resultReason;
     let link;
 
@@ -32,7 +44,7 @@ $(document).ready(function () {
       link = 'https://en.wikipedia.org/wiki/Machine_code';
     } else if (q2 === 'past') {
       resultTitle += 'ASSEMBLY LANGUAGE';
-      resultReason = 'Here is a language from your simpler times.';
+      resultReason = 'Here is a language from simpler times that you prefer';
       link = 'http://flint.cs.yale.edu/cs421/papers/art-of-asm/pdf/FORWARD.PDF';
     } else if (q3 === 'cobalt') {
       resultTitle += 'COBOL';
@@ -79,6 +91,11 @@ $(document).ready(function () {
       resultReason = 'Would you like to work on computer servers?';
       link =
         'https://old.reddit.com/r/golang/comments/mjhf5h/why_people_hate_go/';
+    } else {
+      resultTitle += 'JavaScript';
+      resultReason =
+        'Well you did not pick anything so might as well learn how to do web development. JavaScript section starts at 1:22 in the Click here to learn more! link.';
+      link = 'https://www.destroyallsoftware.com/talks/wat';
     }
     $('#questions-form').hide();
     $('#resultDiv').fadeIn();
@@ -93,17 +110,20 @@ $(document).ready(function () {
     $('#startDiv').fadeIn();
     $('#resultDiv').hide();
     $('#retryDiv').hide();
+    $('.lead').show();
+    $('#submitDiv').hide();
+    $('.invalid-feedback').hide();
 
     // clear out the fields
     $('#name').val('');
-    $('input:radio[name=q1]:checked').checked = false;
-    $('input:radio[name=q2]:checked').checked = false;
-    $('input:radio[name=q3]:checked').checked = false;
-    $('input:radio[name=q4]:checked').checked = false;
-    $('input:radio[name=q5]:checked').checked = false;
-    $('input:radio[name=q6]:checked').checked = false;
-    $('input:radio[name=q7]:checked').checked = false;
-    $('input:radio[name=q8]:checked').checked = false;
+    $('input:radio[name=q1]:checked').prop('checked', false);
+    $('input:radio[name=q2]:checked').prop('checked', false);
+    $('input:radio[name=q3]:checked').prop('checked', false);
+    $('input:radio[name=q4]:checked').prop('checked', false);
+    $('input:radio[name=q5]:checked').prop('checked', false);
+    $('input:radio[name=q6]:checked').prop('checked', false);
+    $('input:radio[name=q7]:checked').prop('checked', false);
+    $('input:radio[name=q8]:checked').prop('checked', false);
     $('#result-title').text('');
     $('#result-reason').text('');
     $('#result-link').attr('href', '');

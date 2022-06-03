@@ -8,7 +8,7 @@
 
 * HTML
 * CSS
-* Bootsrap
+* Bootstrap
 * Javascript
 * jQuery
 

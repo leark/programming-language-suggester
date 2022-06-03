@@ -11,6 +11,10 @@ body {
   display: none;
 }
 
+.questions {
+  display: none;
+}
+
 #name-label {
   text-align: center;
 }
@@ -29,6 +33,7 @@ body {
 
 #submitDiv {
   margin-bottom: 10px;
+  display: none;
 }
 
 #resultDiv {
