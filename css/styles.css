@@ -4,6 +4,9 @@
 
 .radio-questions {
   margin-bottom: 0;
+  font-size: large;
+  border-bottom: 1px black solid;
+  border-top: 1px black solid;
 }
 
 
