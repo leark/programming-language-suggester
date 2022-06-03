@@ -37,10 +37,12 @@ body {
 }
 
 #resultDiv {
+  margin-bottom: 10px;
   display: none;
 }
 
 #retryDiv {
+  margin-bottom: 10px;
   display: none;
 }
 
