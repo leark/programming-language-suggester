@@ -21,7 +21,7 @@ Programming Language Suggester webpage asks the viewer a series of questions abo
 ## Setup/Installation Requirements
 
 1. Open Git Bash if on Windows and terminal if on Mac
-2. Run the command 
+2. Run the command
 
     ``Git clone https://github.com/leark/programming-language-suggester``
 

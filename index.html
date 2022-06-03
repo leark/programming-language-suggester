@@ -5,24 +5,84 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
-  <title></title>
+  <title>Programming Language Suggester</title>
 </head>
 <body>
   <div class="container">
-
+    <div id="intro" class="jumbotron">
+      <h1 class="display-5">What Programming Language Should I Learn?</h1>
+      <p class="lead">
+        Have you wondered what programming language you're most attuned to?
+        <br>
+        Wonder no more as this webpage will clearly show your programming horoscope!
+      </p>
+    </div>
+    <div id="questions">
+      <form id="form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input id="name" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <p class="radio-question">Question here</p>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="q1o1" value="option1">
+            <label class="form-check-label" for="q1o1">
+              option1
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="q1o2" value="option2">
+            <label class="form-check-label" for="q1o2">
+              option2
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="q1o3" value="option3">
+            <label class="form-check-label" for="q1o3">
+              option3
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="q1o4" value="option4">
+            <label class="form-check-label" for="q1o4">
+              option4
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Show me the way!</button>
+      </form>
+    </div>
+    <div id="result">
+      <h3 id="result-title"></h3>
+      <p id="result-reason"></p>
+    </div>
   </div>
 </body>
 </html>
 
 <!-- 
-Include a minimum of 5 survey questions.
-
 Offer a minimum of 3 different language suggestions.
+  Machine language
+  Assembly
+  FORTRAN
+  BASIC
+  COBOL
+  ADA
+  C
+  C++
+  C#
+  Java
+  JavaScript
+  Python
+  Go
+  Swift
+  Rust
+  Ruby
+  Kotlin
 
 One branch should return one result. It shouldn't be possible to be suggested two languages at once.
 
 Make sure that when the user submits the survey again (for a second or third time), that previous answers are hidden, cleared, or replaced prior to showing the new result.
-
-Don't forget regular Git commits and a detailed README. Commit messages should always be on-topic and professional in tone.
 
  -->
